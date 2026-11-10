@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Habitly – Daily Habit Tracker</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="side">
+ <div class="brand"><span class="logo" id="logo"></span>Habitly</div>
+ <nav class="nav" id="nav" aria-label="Main"></nav>
+</aside>
+<main>
+ <section class="view" id="v-dashboard"></section>
+ <section class="view" id="v-habits" hidden></section>
+ <section class="view" id="v-progress" hidden></section>
+ <section class="view" id="v-calendar" hidden></section>
+ <section class="view" id="v-settings" hidden></section>
+</main>
+</div>
+
+<dialog id="hm" aria-labelledby="hmt">
+ <h2 id="hmt">Add habit</h2>
+ <div class="fld"><label for="f-name">Habit name</label><input type="text" id="f-name" maxlength="60" placeholder="e.g. Drink 2 litres of water"></div>
+ <div class="fld"><label for="f-desc">Description</label><textarea id="f-desc" rows="2" maxlength="140" placeholder="A short note about this habit"></textarea></div>
+ <div class="two">
+  <div class="fld"><label for="f-cat">Category</label><select id="f-cat"></select></div>
+  <div class="fld"><label for="f-tod">Preferred time of day</label><select id="f-tod"><option>Anytime</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+ </div>
+ <div class="fld"><label for="f-rem">Daily reminder (optional)</label><input type="time" id="f-rem"></div>
+ <div class="err" id="f-err" role="alert"></div>
+ <div class="mact"><button class="btn" id="hm-cancel" type="button">Cancel</button><button class="btn pri" id="hm-save" type="button">Save habit</button></div>
+</dialog>
+
+<dialog id="cm" aria-labelledby="cmt">
+ <h2 id="cmt">Are you sure?</h2>
+ <p id="cm-msg" class="sub"></p>
+ <div class="mact"><button class="btn" id="cm-no" type="button">Cancel</button><button class="btn dng" id="cm-yes" type="button">Confirm</button></div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
