@@ -46,6 +46,9 @@ h2{font-size:18px;margin:0 0 14px}
 html[data-theme="dark"] .quote{background:#14503a}
 .quote p{font-size:18px;font-weight:600;line-height:1.45;margin:0 0 10px}
 .quote small{opacity:.85}
+.quote .btn{background:#fff;color:#14503a;border-color:#fff}
+.quote .btn:hover{background:#e2f3ea;border-color:#e2f3ea}
+.quote .btn:focus-visible{outline-color:#fff}
 
 .btn{border:1px solid var(--line);background:var(--card);padding:9px 16px;border-radius:12px;font-weight:600;transition:.15s}
 .btn:hover{border-color:var(--g)}
